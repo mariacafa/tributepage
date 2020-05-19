@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #fff
+}
+
+.contenedor{
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, auto);
+  grid-template-areas:
+  "header header header"
+  "aside aside portrait"
+  "contenido contenido contenido"
+  "galeria galeria galeria"
+  "widget1 widget1 widget1"
+  "vestidos vestidos vestidos"
+  "footer footer footer"
+}
+
+
+.portrait img{
+ width: 100%;
+}
+
+.galeria img{
+  width: 30%
+}
+
+.vestidos img{
+  width: 100%;
+
+}
+
+.contenedor .header{
+text-align: center;
+grid-area: header;
+font-size: 250%;
+font-weight: bold;
+}
+
+.contenedor .aside{
+  grid-area: aside;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .contenido{
+  grid-area: contenido;
+  text-align: justify;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contenedor .galeria{
+  grid-area: galeria;
+  text-align: center;
+}
+
+.contenedor .widget1{
+  grid-area: widget1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .vestidos{
+  grid-area: vestidos;
+  text-align: center;
+}
+
+.contenedor .footer{
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 500px){
+.contenedor {
+  grid-template-areas:
+  "header header header"
+  "aside aside aside"
+  "contenido contenido contenido"
+  "galeria galeria galeria"
+  "widget1 widget1 widget1"
+  "vestidos vestidos vestidos"
+  "footer footer footer"
+
+
+}
